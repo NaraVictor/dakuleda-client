@@ -1,6 +1,12 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
-}
+	// reactStrictMode: true,
+	images: {
+		domains: ["api.dakuleda.com", "localhost"],
+	},
+	typescript: {
+		ignoreBuildErrors: true,
+	},
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

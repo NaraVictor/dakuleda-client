@@ -1,0 +1,23 @@
+.single-product-image {
+	max-height: 60vh;
+	max-width: 40vw;
+	min-height: 40vh;
+	// min-width: 30vw;
+}
+
+.product-gallery-img {
+	max-height: 100px;
+	max-width: 100px;
+}
+
+@media screen and (max-width: 999px) {
+	.single-product-image {
+		max-width: 95vw;
+		min-height: 30vh;
+	}
+
+	.product-gallery-img {
+		max-height: 50px;
+		margin: 0 10px;
+	}
+}

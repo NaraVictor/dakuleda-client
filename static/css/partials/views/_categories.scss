@@ -1,0 +1,93 @@
+@import "../common/colors";
+@import "../common/utils";
+
+@mixin categories {
+	text-decoration: none;
+	list-style: none;
+	display: block;
+	color: black;
+
+	&:hover {
+		background-color: #eee;
+		text-decoration: none;
+		color: $dakuleda-dark-gold;
+	}
+}
+
+.main-category {
+	@include categories();
+	margin-left: 10px;
+	padding: 10px 0px;
+	// font-weight: bold;
+	border-bottom: 0.2px solid #eee;
+}
+
+.sub-category {
+	@include categories();
+	font-weight: normal;
+}
+
+.category-link {
+	text-decoration: underline;
+}
+
+.categories-list {
+	border-right: 0.5px solid #eee;
+}
+
+#category-search {
+	@include search-box();
+	padding: 5px 15px;
+}
+
+.categories-menu {
+	display: none;
+}
+
+.view-options {
+	position: absolute;
+	right: 5%;
+	top: 7px;
+}
+
+.category {
+	position: relative;
+	height: 9rem;
+
+	& img {
+		border-radius: 100%;
+		max-width: 150px;
+		max-height: 150px;
+	}
+
+	& .category-title {
+		position: absolute;
+		bottom: 0px;
+	}
+}
+
+// media
+@media screen and (max-width: 780px) {
+	.categories-list {
+		display: none;
+	}
+
+	.categories-menu {
+		display: inline-block;
+		// color: $dakuleda-gold;
+	}
+
+	.view-options small {
+		display: none;
+	}
+
+	.category {
+		height: 9rem;
+
+		& img {
+			border-radius: 100%;
+			max-width: 150px;
+			max-height: 150px;
+		}
+	}
+}

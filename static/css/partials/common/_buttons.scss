@@ -1,0 +1,59 @@
+@import "colors";
+
+@mixin btn($border) {
+	border-radius: 50rem;
+	padding: 0.2rem 0.5rem;
+	margin: 0px 3px;
+	border: 1px solid $border;
+	background-color: transparent;
+	transition: all 0.1s linear;
+	text-decoration: none !important;
+	color: #333;
+}
+
+// .btn {
+// 	@include btn();
+// }
+
+.btn-dc-white {
+	@include btn($dakuleda-black);
+
+	&:hover {
+		background-color: $dakuleda-black;
+		color: white;
+	}
+}
+
+.btn-dc-primary {
+	@include btn($dakuleda-gold);
+
+	&:hover {
+		color: black;
+		background-color: $dakuleda-gold;
+		// background-color: transparent;
+	}
+}
+
+.btn-primary-filled {
+	@include btn($dakuleda-gold);
+	color: black;
+	background-color: $dakuleda-gold;
+	font-weight: 500;
+	transition: background-color 0.3s linear;
+
+	&:hover {
+		background-color: $dakuleda-yellow;
+	}
+}
+
+.btn-danger-filled {
+	@include btn(#f00);
+	color: white;
+	background-color: red;
+	font-weight: 500;
+	transition: background-color 0.3s linear;
+
+	&:hover {
+		background-color: #333;
+	}
+}

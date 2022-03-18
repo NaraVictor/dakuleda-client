@@ -1,0 +1,27 @@
+/* Color Theme Swatches in Hex (made from adobe colors) */
+
+$dakuleda-blue: #423f8c;
+$dakuleda-yellow: #f2cb05;
+$dakuleda-gold: #f2b705;
+$dakuleda-dark-gold: #8c6a03;
+$dakuleda-black: #0d0d0d;
+
+.dc-yello {
+	color: $dakuleda-yellow;
+}
+.dc-gold {
+	color: $dakuleda-gold;
+}
+.dc-black {
+	color: $dakuleda-black;
+}
+
+.dc-bg-yello {
+	background-color: $dakuleda-yellow;
+}
+.dc-bg-gold {
+	background-color: $dakuleda-gold;
+}
+.dc-bg-black {
+	background-color: $dakuleda-black;
+}

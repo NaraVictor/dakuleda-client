@@ -1,0 +1,143 @@
+@import "../common/colors";
+
+.product {
+	position: relative;
+	height: 16rem;
+
+	& .product-image img {
+		max-width: 200px;
+		max-height: 150px;
+	}
+
+	& a {
+		text-decoration: none;
+		color: black;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	.add-ons {
+		position: absolute;
+		top: 0;
+		text-align: left;
+	}
+
+	.change-percent {
+		position: absolute;
+		top: 0;
+		right: 0;
+		background-color: #262625bf;
+		color: whitesmoke;
+		border-radius: 5px;
+		padding: 3px;
+		font-size: 0.8rem;
+		margin-right: 7px;
+	}
+}
+
+@mixin absolutePosition {
+	position: absolute;
+	width: 100%;
+}
+
+.product-footer {
+	@include absolutePosition();
+	bottom: 0px;
+}
+
+.product-detail {
+	@include absolutePosition();
+	bottom: 16%;
+}
+
+.product-title {
+	font-size: 1rem;
+	// font-weight: 700;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display: -webkit-box;
+	-webkit-line-clamp: 1; /* number of lines to show */
+	-webkit-box-orient: vertical;
+}
+
+// @media screen and (min-width: 400px) {
+// 	.product-title {
+// 		overflow: hidden;
+// 		text-overflow: ellipsis;
+// 		display: -webkit-box;
+// 		-webkit-line-clamp: 2; /* number of lines to show */
+// 		-webkit-box-orient: vertical;
+// 	}
+// }
+
+// PRODUCT LIST
+
+.product-list a {
+	color: $dakuleda-black;
+
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.product-list-image {
+	max-width: 240px;
+	max-height: 200px;
+}
+
+.product-list-sm-details {
+	display: none;
+}
+
+// mobile devices
+@media screen and (max-width: 770px) {
+	#product-list-description,
+	.product-list-prices {
+		display: none;
+	}
+
+	.product {
+		height: 14rem;
+		margin: 1rem 0;
+
+		& .product-image img {
+			max-width: 180px;
+			max-height: 120px;
+		}
+	}
+
+	.product-list-image {
+		max-width: 92px;
+		max-height: 150px;
+		margin-left: 5px;
+	}
+
+	.product-title-details,
+	.product-detail {
+		& .product-list-manufacturer {
+			font-size: 0.9rem;
+			margin-bottom: 3px;
+			color: $dakuleda-gold;
+		}
+
+		& .product-list-sm-details,
+		.product-list-sm-details h4,
+		.product-list-sm-details p {
+			display: inline;
+			font-size: 1rem;
+		}
+
+		& .product-list-sm-details h4 {
+			font-weight: bold;
+			margin-right: 9px;
+		}
+	}
+
+	.product-list-footer button {
+		font-size: 0.8rem;
+		border-width: 1.8px;
+		margin-left: 15px;
+	}
+}

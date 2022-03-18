@@ -1,0 +1,20 @@
+@import "partials/common/buttons";
+@import "partials/common/colors";
+
+// components
+@import "partials/components/navs";
+@import "partials/components/product";
+@import "partials/components/ads";
+@import "partials/components/spinner";
+@import "partials/components/app-modal";
+
+// views
+@import "partials/views/categories";
+@import "partials/views/home";
+@import "partials/views/cart";
+@import "partials/views/checkout";
+@import "partials/views/single-product";
+
+// base
+@import "partials/base";
+@import "partials/admin";

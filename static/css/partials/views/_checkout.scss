@@ -1,0 +1,26 @@
+@import "../common/colors";
+
+@mixin highlight {
+	background-color: $dakuleda-gold;
+	border: 1px solid $dakuleda-gold;
+	color: black;
+	font-weight: bold;
+}
+
+.payment-choice {
+	height: 50px;
+	border: 1px solid #333;
+	border-radius: 5px;
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transition: 0.15s all linear;
+
+	&:hover {
+		@include highlight();
+	}
+}
+
+.selected-choice {
+	@include highlight();
+}

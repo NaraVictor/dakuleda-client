@@ -1,0 +1,23 @@
+@mixin responsive-img($width: 100px, $auto_height: auto) {
+	// a responsive image mixin with default max-width & height set
+	max-width: $width;
+
+	@if $auto_height==auto {
+		height: auto;
+	} @else {
+		max-height: $auto_height;
+	}
+}
+
+@mixin search-box {
+	border-radius: 20px;
+	border: 0px;
+	background-color: #eee;
+	outline: none;
+}
+
+@mixin control {
+	padding: 10px;
+	border: 0px;
+	outline: none;
+}

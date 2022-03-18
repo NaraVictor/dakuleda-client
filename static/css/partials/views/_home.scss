@@ -1,0 +1,28 @@
+@import "../common/colors";
+
+.category p {
+	color: $dakuleda-black;
+}
+
+.slider-image {
+	height: 50vh;
+}
+
+// .slider-container {
+// 	min-height: "40vh";
+// }
+
+@media screen and (max-width: 769px) {
+	.slider-image {
+		width: 100vw;
+		height: 25vh
+
+		// img{
+		// 	max-height: 25vh
+		// }
+	}
+
+	// .slider-container {
+	// 	min-height: "20vh";
+	// }
+}
