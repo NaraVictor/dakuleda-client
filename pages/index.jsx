@@ -1,15 +1,12 @@
 import React, { useContext } from "react";
 import ShopByCategory from "../components/homepage/categories";
-import Shop from "../components/homepage/shop";
 import DefaultSlider, { SlimSlider } from "../components/carousel";
 import { SplideSlide } from "@splidejs/react-splide";
-import { useState, useEffect } from "react";
 import { generateFileUrl, fetchData, setLayout, getLayout } from "../helpers/utilities";
 import Ad from "../components/ads/ad";
 import ScrollToTop from "react-scroll-to-top";
 import HeadTag from "./../components/header-tag";
 import Image from "next/image";
-import logo from "../static/img/logo/logo-new.png"
 import { shopContext } from "../context/shopContext";
 
 const HomePage = ( { sliders } ) =>
@@ -25,10 +22,10 @@ const HomePage = ( { sliders } ) =>
 				description={
 					"home of authentic electronics, vehicles, motorbikes, home appliances and more."
 				}
-				// link={window.location.href}
+				link={ typeof window !== 'undefined' && window.location.href }
 				title={ "Dakuleda" }
 				id={ Math.random() }
-				image={ logo }
+				image={ generateFileUrl( 'logo.png' ) }
 			/>
 			{ sliders?.length > 0 && (
 				<div className="text-center">

@@ -24,11 +24,12 @@ import
 import { SRLWrapper } from "simple-react-lightbox";
 
 
-const SingleProduct = ( { prod, gallery, locationURL } ) =>
+const SingleProduct = ( { prod, gallery, currentUrl } ) =>
 {
 	// const { name, imageFileName, regularPrice, newPrice, category, description } =
 	// 	prod;
 	const [ qty, setQty ] = useState( 1 );
+	console.log( 'inside single product ', currentUrl );
 
 	let count = [];
 
@@ -153,16 +154,16 @@ const SingleProduct = ( { prod, gallery, locationURL } ) =>
 
 						{/* social share buttons */ }
 						<div className="col-12">
-							<FacebookShareButton url={ locationURL }>
+							<FacebookShareButton url={ currentUrl }>
 								<FacebookIcon size={ 32 } round={ true } />
 							</FacebookShareButton>
-							<TwitterShareButton url={ locationURL } className="mx-2">
+							<TwitterShareButton url={ currentUrl } className="mx-2">
 								<TwitterIcon size={ 32 } round={ true } />
 							</TwitterShareButton>
-							<WhatsappShareButton url={ locationURL }>
+							<WhatsappShareButton url={ currentUrl }>
 								<WhatsappIcon size={ 32 } round={ true } />
 							</WhatsappShareButton>
-							<TelegramShareButton url={ locationURL } className="ml-2">
+							<TelegramShareButton url={ currentUrl } className="ml-2">
 								<TelegramIcon size={ 32 } round={ true } />
 							</TelegramShareButton>
 						</div>

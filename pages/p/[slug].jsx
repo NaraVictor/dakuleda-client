@@ -25,10 +25,11 @@ const ProductDetailPage = ( { product, slug, ...props } ) =>
 	const [ features, setFeatures ] = useState( [] );
 	const [ similarProds, setSimilarProds ] = useState( [] );
 	const [ gallery, setGallery ] = useState( [] );
+	const [ locationURL, setURL ] = useState( '' );
 	const { setLayout } = useContext( shopContext )
 	setLayout( 'shop' )
 
-	let locationURL
+
 
 	const fetchFeatures = ( id ) =>
 	{
@@ -68,7 +69,7 @@ const ProductDetailPage = ( { product, slug, ...props } ) =>
 	useEffect( () =>
 	{
 		// client side code
-		locationURL = window.location.href
+		setURL( window.location.href )
 
 		//set the retrieved the product from next server call.
 
@@ -120,7 +121,7 @@ const ProductDetailPage = ( { product, slug, ...props } ) =>
 				image={ generateFileUrl( product.imageFileName ) }
 			/>
 
-			<SingleProduct prod={ prod } locationUrl={ locationURL } gallery={ gallery } />
+			<SingleProduct prod={ prod } currentUrl={ locationURL } gallery={ gallery } />
 			<ProductDetailNav />
 			<div className="py-2">
 				<Features features={ features } />
